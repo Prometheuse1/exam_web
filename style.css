@@ -5,3 +5,8 @@ body{
     align-items: center;
     gap: 15px;
 }
+
+nav a{
+    text-decoration: none;
+    margin: 0 10;
+}
