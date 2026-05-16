@@ -16,10 +16,19 @@ button.addEventListener('click', function() {
     else
     {
         const users=JSON.parse(localStorage.getItem('users') || '[]');
+        
+        // Vérifier si l'utilisateur existe déjà
+        const userExists = users.some(u => u.email === mail);
+        if (userExists) {
+            alert('Cet email est déjà utilisé !');
+            return;
+        }
+
         users.push({nom: name,email: mail,password: pass})
         localStorage.setItem('users', JSON.stringify(users))
 
-        alert('Inscription réussie !' + "nom : " + nom.value + " email : " + email.value + " password : " + password.value);
+        alert('Inscription réussie ! Redirection vers la page de connexion...');
         nom.value=email.value=password.value='';
+        window.location.href = 'login.html';
     }
 });
