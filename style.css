@@ -11,7 +11,8 @@ h1
     gap: 10px;
 }
 
-.form input{
+.form input
+{
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
